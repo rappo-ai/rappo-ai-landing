@@ -11,7 +11,6 @@ import Feature from 'sections/feature';
 import PartnerSection from 'sections/partner';
 import WorkFlow from 'sections/workflow';
 import TestimonialCard from 'sections/testimonial';
-import TestimonialsAgency from 'sections/testimonials-agency';
 import SecurePayment from 'sections/secure-payment';
 import Package from 'sections/package';
 import Faq from 'sections/faq';
@@ -29,7 +28,6 @@ export default function IndexPage() {
           <PartnerSection />
           <WorkFlow />
           <TestimonialCard />
-          <TestimonialsAgency />
           <SecurePayment />
           <Package />
           <Faq />

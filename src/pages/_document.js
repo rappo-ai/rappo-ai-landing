@@ -13,7 +13,6 @@ class CustomDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <iframe src="https://landerbot.rappo.ai" className="chatbot"></iframe>
         </body>
       </Html>
     );
