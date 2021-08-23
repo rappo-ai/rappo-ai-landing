@@ -136,6 +136,7 @@ const styles = {
     },
     headingSubText: {
       textAlign: ['center', null, null, 'left'],
+      fontSize: ['18px', '21px', '21px', '21px'],
       fontWeight: 400,
       color: 'black',
     }

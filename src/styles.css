@@ -43,6 +43,7 @@
     background: #35b600;
     border: 1px solid #35b600;
     color: #ffffff;
+    font-family: 'Nunito', sans-serif;
 }
 
 @media screen and (max-width: 768px) {
