@@ -3,8 +3,8 @@ import { jsx, Container, Flex, Button } from 'theme-ui';
 import { keyframes } from '@emotion/core';
 import { Link } from 'react-scroll';
 import Logo from 'components/logo';
-import LogoDark from 'assets/logo-dark.svg';
-import LogoWhite from 'assets/logo.svg';
+import LogoDark from 'assets/landing/logo.svg';
+import LogoWhite from 'assets/landing/logo.svg';
 import { DrawerProvider } from '../../contexts/drawer/drawer.provider';
 import MobileDrawer from './mobile-drawer';
 import menuItems from './header.data';
@@ -32,13 +32,13 @@ export default function Header({ className }) {
             ))}
           </Flex>
 
-          <Button
-            className="donate__btn"
+          <button
+            className="get_started_button get_started_button_header"
             variant="secondary"
             aria-label="Get Started"
           >
             Get Started
-          </Button>
+          </button>
 
           <MobileDrawer />
         </Container>
