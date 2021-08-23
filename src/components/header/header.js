@@ -3,8 +3,8 @@ import { jsx, Container, Flex, Button } from 'theme-ui';
 import { keyframes } from '@emotion/core';
 import { Link } from 'react-scroll';
 import Logo from 'components/logo';
-import LogoDark from 'assets/logo-dark.svg';
-import LogoWhite from 'assets/logo.svg';
+import LogoDark from 'assets/landing/logo.svg';
+import LogoWhite from 'assets/landing/logo.svg';
 import { DrawerProvider } from '../../contexts/drawer/drawer.provider';
 import MobileDrawer from './mobile-drawer';
 import menuItems from './header.data';
@@ -110,7 +110,7 @@ const styles = {
     a: {
       fontSize: '16px',
       fontWeight: '400',
-      px: 25,
+      // px: 25,
       cursor: 'pointer',
       lineHeight: '1.2',
       '&.active': {

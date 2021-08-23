@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import ModalVideo from 'react-modal-video';
 import { Link } from 'components/link';
 import { FaPlayCircle } from 'react-icons/fa';
+import TextFeature from 'components/text-feature';
 import BannerBG from 'assets/bannerBg.png';
 import BannerThumb from 'assets/banner-thumb.png';
 
@@ -43,15 +44,17 @@ export default function Banner() {
     <section sx={styles.banner} id="home">
       <Container sx={styles.banner.container}>
         <Box sx={styles.banner.contentBox}>
-          <Heading as="h1" variant="heroPrimary">
-            Experience your ultimate mobile application
+          <Heading as="h1" sx={styles.banner.headingText} variant="heroPrimary">
+            Instantly Connect with Your Customers
           </Heading>
-          <Text as="p" variant="heroSecondary">
-            Get your blood tests delivered at let home collect sample from the
-            victory of the managements that supplies best design system
-            guidelines ever.
+          <Text as="p" sx={styles.banner.headingSubText} variant="heroSecondary">
+            Add Rappo live chat to your website in minutes.
+            Chat with your visitors as they browse your website. Boost your sales
           </Text>
-          <Flex>
+          <button variant="primary" aria-label={'Get Started'} className="get_started_button">
+            {'Get Started'}
+          </button>
+          {/* <Flex>
             <Button variant="whiteButton" aria-label="Get Started">
               Get Started
             </Button>
@@ -70,8 +73,8 @@ export default function Banner() {
                 <FaPlayCircle /> Watch Video
               </Button>
             </>
-          </Flex>
-          <Flex sx={styles.sponsorBox}>
+          </Flex> */}
+          {/* <Flex sx={styles.sponsorBox}>
             <Text sx={styles.sponsorTitle}>Sponsored by:</Text>
             <Box sx={styles.sponsorBox.sponsor}>
               {data.map((item, index) => (
@@ -80,12 +83,12 @@ export default function Banner() {
                 </Link>
               ))}
             </Box>
-          </Flex>
+          </Flex> */}
         </Box>
 
-        <Box sx={styles.banner.imageBox}>
+        {/* <Box sx={styles.banner.imageBox}>
           <Image src={BannerThumb} alt="banner" />
-        </Box>
+        </Box> */}
       </Container>
     </section>
   );
@@ -94,19 +97,19 @@ export default function Banner() {
 const styles = {
   banner: {
     overflow: ['hidden', 'initial', null, 'hidden'],
-    backgroundImage: `url(${BannerBG})`,
-    backgroundRepeat: `no-repeat`,
-    backgroundPosition: 'top left',
-    backgroundSize: 'cover',
+    // backgroundImage: `url(${BannerBG})`,
+    // backgroundRepeat: `no-repeat`,
+    // backgroundPosition: 'top left',
+    // backgroundSize: 'cover',
     borderBottomRightRadius: [100, 150, null, null, null, 250],
     pt: ['150px', null, null, null, null, null, '140px', '130px'],
     pb: ['100px', null, null, '110px', null, 10, '150px'],
-    backgroundColor: 'primary',
+    // backgroundColor: 'primary',
     container: {
       display: 'flex',
     },
     contentBox: {
-      width: ['100%', null, '85%', '55%', '50%', '55%'],
+      width: ['100%', null, '100%', '55%', '50%', '55%'],
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'flex-start',
@@ -124,6 +127,18 @@ const styles = {
       textAlign: 'right',
       width: '100%',
     },
+    headingText: {
+      textAlign: ['center', null, null, 'left'],
+      fontWeight: 500,
+      color: 'black',
+      fontSize: ['38px', '52px', '52px', '52px'],
+      // marginBottom: 24,
+    },
+    headingSubText: {
+      textAlign: ['center', null, null, 'left'],
+      fontWeight: 400,
+      color: 'black',
+    }
   },
   sponsorTitle: {
     color: 'white',
