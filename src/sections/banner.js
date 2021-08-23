@@ -49,7 +49,7 @@ export default function Banner() {
           </Heading>
           <Text as="p" sx={styles.banner.headingSubText} variant="heroSecondary">
             Add Rappo live chat to your website in minutes.
-            Chat with your visitors as they browse your website. Boost your sales
+            Chat with your visitors as they browse your website. Boost your sales.
           </Text>
           <button variant="primary" aria-label={'Get free live chat'} className="get_started_button">
             {'Get free live chat'}
