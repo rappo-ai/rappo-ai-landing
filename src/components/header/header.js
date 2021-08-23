@@ -32,13 +32,13 @@ export default function Header({ className }) {
             ))}
           </Flex>
 
-          <Button
-            className="donate__btn"
+          <button
+            className="get_started_button get_started_button_header"
             variant="secondary"
             aria-label="Get Started"
           >
             Get Started
-          </Button>
+          </button>
 
           <MobileDrawer />
         </Container>

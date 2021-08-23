@@ -34,7 +34,7 @@
     cursor: pointer;
     -webkit-text-decoration: none;
     text-decoration: none;
-    min-width: 220px;
+    min-width: 180px;
     font-size: 21px;
     line-height: 1.48;
     font-weight: 500;
@@ -46,8 +46,15 @@
     font-family: 'Nunito', sans-serif;
 }
 
+.get_started_button_header {
+  align-self: right;
+}
+
 @media screen and (max-width: 768px) {
   .get_started_button{
     align-self: center;
+  }
+  .get_started_button_header {
+    align-self: auto;
   }
 }

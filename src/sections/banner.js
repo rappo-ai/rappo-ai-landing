@@ -51,8 +51,8 @@ export default function Banner() {
             Add Rappo live chat to your website in minutes.
             Chat with your visitors as they browse your website. Boost your sales
           </Text>
-          <button variant="primary" aria-label={'Get Started'} className="get_started_button">
-            {'Get Started'}
+          <button variant="primary" aria-label={'Get free live chat'} className="get_started_button">
+            {'Get free live chat'}
           </button>
           {/* <Flex>
             <Button variant="whiteButton" aria-label="Get Started">
