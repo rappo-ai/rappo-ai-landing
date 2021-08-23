@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: 'https://startup-app-modern.vercel.app',
+  siteUrl: 'https://rappo.ai',
   generateRobotsTxt: true,
   // optional
   // robotsTxtOptions: {
