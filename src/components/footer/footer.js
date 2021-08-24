@@ -25,10 +25,7 @@ export default function Footer() {
         </Box>
       </Container> */}
       <Text sx={styles.footer.copyright}>
-        Copyright 2021
-        <Link path="https://www.rappo.ai/" target="_blank">
-          Rappo
-        </Link>
+        Copyright 2021 Rappo
       </Text>
     </footer>
   );
