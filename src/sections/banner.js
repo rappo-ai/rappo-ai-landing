@@ -94,12 +94,13 @@ const styles = {
     imageBox: {
       // display: ['null', null, null, 'block'],
       justifyContent: 'center',
-      ml: [0, null, null, '0px', '0px', '0px', '0px', '0px'],
-      mr: [0, null, null, '-145px', '-160px', '-180px', '-220px', '-290px'],
+      ml: [-30, null, null, '0px', '0px', '0px', '0px', '0px'],
+      // mr: [0, null, null, '-145px', '-160px', '-180px', '-220px', '-290px'],
+      mr: [-30, null, null, '-145px', '-145px', '-145px', '-145px', '-145px'],
       // mt: [0, null, null, '40px', 4, 7, 0],
       // mb: [0, null, null, null, '-45px', '-70px', null, '-115px'],
       textAlign: 'right',
-      // backgroundColor: 'rgba(255,0,0,0.5)',
+      backgroundColor: 'rgba(255,0,0,0.5)',
     },
     headingText: {
       textAlign: ['center', null, null, 'left'],
