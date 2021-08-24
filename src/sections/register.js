@@ -32,6 +32,7 @@ export default function Register() {
 
 const styles = {
   coreFeature: {
+    mt: 20,
     py: [0, null, null, 2, null, 7],
     position: 'relative',
     '&::before': {
@@ -52,15 +53,15 @@ const styles = {
   containerBox: {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
     flexDirection: ['column', null, null, 'row'],
     // height: 400,
   },
   thumbnail: {
     display: ['none', null, null, 'block'],
-    pl: [0, 5, 0, null, 7, 95],
-    pr: [0, 5, null, null, null, 75, 95],
-    order: [2, null, null, 0],
+    // pl: [0, 5, 0, null, 7, 95],
+    // pr: [0, 5, null, null, null, 75, 95],
+    // order: [2, null, null, 0],
     // background: 'red'
   },
   contentBox: {
@@ -77,8 +78,8 @@ const styles = {
     justifyContent: 'flex-end',
     alignItems: 'flex-end',
     lineHeight: 1.2,
-    ml: 'auto',
-    mr: 'auto',
+    // ml: 'auto',
+    // mr: 'auto',
     width: 320,
   },
   signUpMsg: {

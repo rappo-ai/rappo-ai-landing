@@ -21,7 +21,7 @@ export default function IndexPage() {
     <ThemeProvider theme={theme}>
       <StickyProvider>
         <Layout>
-          <SEO title="Rappo AI" />
+          <SEO title="Rappo" />
           <Banner />
           <Register/>
           {/* <KeyFeature />

@@ -5,7 +5,7 @@ import menuItems from './footer.data';
 export default function Footer() {
   return (
     <footer sx={styles.footer}>
-      <Container sx={styles.footer.container}>
+      {/* <Container sx={styles.footer.container}>
         <Box sx={styles.footer.footerTopArea}>
           {menuItems.map(({ header, items }, i) => (
             <Box sx={styles.footer.menus} key={i}>
@@ -23,11 +23,11 @@ export default function Footer() {
             </Box>
           ))}
         </Box>
-      </Container>
+      </Container> */}
       <Text sx={styles.footer.copyright}>
-        All right reserved - Design & Developed by
+        Copyright 2021
         <Link path="https://redq.io/" target="_blank">
-          RedQ, Inc
+          Rappo
         </Link>
       </Text>
     </footer>
