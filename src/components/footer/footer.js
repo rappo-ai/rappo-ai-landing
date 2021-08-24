@@ -26,7 +26,7 @@ export default function Footer() {
       </Container> */}
       <Text sx={styles.footer.copyright}>
         Copyright 2021
-        <Link path="https://redq.io/" target="_blank">
+        <Link path="https://rappo.ai/" target="_blank">
           Rappo
         </Link>
       </Text>
