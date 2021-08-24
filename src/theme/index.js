@@ -8,7 +8,7 @@ export default {
     background: '#FFFFFF', // body background color
     background_secondary: '#F9FBFD', // secondary background color
     border_color: '#E5ECF4', // border color
-    primary: '#1F3E76', // primary button and link color
+    primary: '#35b600', // primary button and link color
     secondary: '#25CB9E', // secondary color - can be used for hover states
     muted: '#7B8188', // muted color
     accent: '#609', // a contrast color for emphasizing UI
@@ -196,6 +196,7 @@ export default {
   links: {
     default: {
       cursor: 'pointer',
+      textDecoration: 'none',
     },
     bold: {
       fontWeight: 'bold',
@@ -229,18 +230,28 @@ export default {
     }, // default variant for MenuButton
     // you can reference other values defined in the theme
     defaultBtn: {
-      borderRadius: '45px',
-      fontSize: ['14px', 1, null, null, 2],
-      letterSpacings: ['-0.5px', null, null, null, '-0.15px'],
-      padding: ['11px 20px 10px', null, null, null, '13px 30px'],
-      fontFamily: 'body',
-      cursor: 'pointer',
-      lineHeight: 1.2,
       transition: 'all 0.25s',
+      display: 'inline-flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: 0,
+      borderRadius: '4px',
+      cursor: 'pointer',
+      textDecoration: 'none',
+      minWidth: '180px',
+      fontSize: '21px',
+      lineHeight: 1.48,
       fontWeight: 500,
+      height: '52px',
+      padding: '0 32px',
+      background: '#35b600',
+      border: '1px solid #35b600',
+      color: '#ffffff',
+      fontFamily: "'Nunito', sans-serif",
       '&:focus': {
         outline: 0,
       },
+      
     },
     primary: {
       variant: 'buttons.defaultBtn',

@@ -31,14 +31,9 @@ export default function Header({ className }) {
               </Link>
             ))}
           </Flex>
-
-          <button
-            className="get_started_button get_started_button_header"
-            variant="secondary"
-            aria-label="Get Started"
-          >
-            Get Started
-          </button>
+          <Button variant="primary" aria-label={'Get Started'} sx={styles.getStarted}>
+            {'Get Started'}
+          </Button>
 
           <MobileDrawer />
         </Container>
@@ -95,6 +90,9 @@ const styles = {
         },
       },
     },
+  },
+  getStarted: {
+    display: ['none', null, null, 'block']
   },
   container: {
     display: 'flex',
