@@ -17,7 +17,7 @@
 }
 
 .get_started_button {
-    display: -webkit-inline-box;
+    /* display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -43,19 +43,12 @@
     background: #35b600;
     border: 1px solid #35b600;
     color: #ffffff;
-    font-family: 'Nunito', sans-serif;
-}
-
-.get_started_button_header {
-  align-self: right;
+    font-family: 'Nunito', sans-serif; */
 }
 
 @media screen and (max-width: 768px) {
   .get_started_button{
     align-self: center;
-  }
-  .get_started_button_header {
-    align-self: auto;
-    display: none;
+    margin-bottom: 35px !important;
   }
 }

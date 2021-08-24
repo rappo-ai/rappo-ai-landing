@@ -8,6 +8,7 @@ import { FaPlayCircle } from 'react-icons/fa';
 import TextFeature from 'components/text-feature';
 import BannerBG from 'assets/bannerBg.png';
 import BannerThumb from 'assets/banner-thumb.png';
+import LandingGraphic from 'assets/landing/landing_graphic.png'
 
 import client1 from 'assets/sponsor/paypal.svg';
 import client2 from 'assets/sponsor/google.svg';
@@ -51,44 +52,14 @@ export default function Banner() {
             Add Rappo live chat to your website in minutes.
             Chat with your visitors as they browse your website. Boost your sales.
           </Text>
-          <button variant="primary" aria-label={'Get free live chat'} className="get_started_button">
+          <Button variant="primary" aria-label={'Get free live chat'} className="get_started_button">
             {'Get free live chat'}
-          </button>
-          {/* <Flex>
-            <Button variant="whiteButton" aria-label="Get Started">
-              Get Started
-            </Button>
-            <>
-              <ModalVideo
-                channel="youtube"
-                isOpen={videoOpen}
-                videoId="ZNA9rmDsYVE"
-                onClose={() => setVideoOpen(false)}
-              />
-              <Button
-                variant="textButton"
-                aria-label="Watch Video"
-                onClick={handleClick}
-              >
-                <FaPlayCircle /> Watch Video
-              </Button>
-            </>
-          </Flex> */}
-          {/* <Flex sx={styles.sponsorBox}>
-            <Text sx={styles.sponsorTitle}>Sponsored by:</Text>
-            <Box sx={styles.sponsorBox.sponsor}>
-              {data.map((item, index) => (
-                <Link path={item.path} key={`client-key${index}`}>
-                  <Image src={item.image} alt={item.title} />
-                </Link>
-              ))}
-            </Box>
-          </Flex> */}
+          </Button>
         </Box>
 
-        {/* <Box sx={styles.banner.imageBox}>
-          <Image src={BannerThumb} alt="banner" />
-        </Box> */}
+        <Box sx={styles.banner.imageBox}>
+          <Image src={LandingGraphic} alt="banner" />
+        </Box>
       </Container>
     </section>
   );
@@ -107,39 +78,42 @@ const styles = {
     // backgroundColor: 'primary',
     container: {
       display: 'flex',
+      alignItems: 'flex-start',
+      justifyContent: 'space-between',
+      flexWrap: ['wrap', null, null, 'nowrap'],
     },
     contentBox: {
-      width: ['100%', null, '100%', '55%', '50%', '55%'],
+      width: ['100%', null, '100%', '50%', '50%', '50%'],
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'flex-start',
       flexShrink: 0,
       pt: [0, null, null, null, null, null, 5, 7],
+      // backgroundColor: 'blue'
     },
     imageBox: {
-      display: ['none', null, null, 'block'],
+      // display: ['null', null, null, 'block'],
       justifyContent: 'center',
-      ml: [0, null, null, '-110px', '-115px', '-150px', '-210px', '-270px'],
+      ml: [0, null, null, '0px', '0px', '0px', '0px', '0px'],
       mr: [0, null, null, '-145px', '-160px', '-180px', '-220px', '-290px'],
-      mt: [0, null, null, '40px', 4, 7, 0],
-      mb: [0, null, null, null, '-45px', '-70px', null, '-115px'],
-      overflow: 'hidden',
+      // mt: [0, null, null, '40px', 4, 7, 0],
+      // mb: [0, null, null, null, '-45px', '-70px', null, '-115px'],
       textAlign: 'right',
-      width: '100%',
+      // backgroundColor: 'rgba(255,0,0,0.5)',
     },
     headingText: {
       textAlign: ['center', null, null, 'left'],
-      fontWeight: 500,
+      fontWeight: 600,
       color: 'black',
-      fontSize: ['38px', '52px', '52px', '52px'],
+      fontSize: ['38px', '52px', '52px', '38px', '52px', '52px'],
       // marginBottom: 24,
     },
     headingSubText: {
       textAlign: ['center', null, null, 'left'],
-      fontSize: ['18px', '21px', '21px', '21px'],
+      fontSize: ['18px', '18px', '21px', '18px', '21px', '21px'],
       fontWeight: 400,
       color: 'black',
-    }
+    },
   },
   sponsorTitle: {
     color: 'white',
