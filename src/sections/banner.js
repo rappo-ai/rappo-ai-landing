@@ -100,7 +100,7 @@ const styles = {
       // mt: [0, null, null, '40px', 4, 7, 0],
       // mb: [0, null, null, null, '-45px', '-70px', null, '-115px'],
       textAlign: 'right',
-      backgroundColor: 'rgba(255,0,0,0.5)',
+      // backgroundColor: 'rgba(255,0,0,0.5)',
     },
     headingText: {
       textAlign: ['center', null, null, 'left'],
