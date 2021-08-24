@@ -14,15 +14,17 @@ import TestimonialCard from 'sections/testimonial';
 import SecurePayment from 'sections/secure-payment';
 import Package from 'sections/package';
 import Faq from 'sections/faq';
+import Register from 'sections/register';
 
 export default function IndexPage() {
   return (
     <ThemeProvider theme={theme}>
       <StickyProvider>
         <Layout>
-          <SEO title="Startup Landing 004" />
+          <SEO title="Rappo AI" />
           <Banner />
-          <KeyFeature />
+          <Register/>
+          {/* <KeyFeature />
           <CoreFeature />
           <Feature />
           <PartnerSection />
@@ -30,7 +32,7 @@ export default function IndexPage() {
           <TestimonialCard />
           <SecurePayment />
           <Package />
-          <Faq />
+          <Faq /> */}
         </Layout>
       </StickyProvider>
     </ThemeProvider>
