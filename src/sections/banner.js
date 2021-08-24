@@ -74,7 +74,7 @@ const styles = {
     // backgroundSize: 'cover',
     borderBottomRightRadius: [100, 150, null, null, null, 250],
     pt: ['150px', null, null, null, null, null, '140px', '130px'],
-    pb: ['100px', null, null, '110px', null, 10, '150px'],
+    pb: ['0px', null, null, '60px', null, 10, '80px'],
     // backgroundColor: 'primary',
     container: {
       display: 'flex',
@@ -104,7 +104,7 @@ const styles = {
     },
     headingText: {
       textAlign: ['center', null, null, 'left'],
-      fontWeight: 600,
+      fontWeight: 700,
       color: 'black',
       fontSize: ['38px', '52px', '52px', '38px', '52px', '52px'],
       // marginBottom: 24,
