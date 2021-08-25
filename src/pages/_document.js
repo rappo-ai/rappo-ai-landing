@@ -40,8 +40,3 @@ class CustomDocument extends Document {
 }
 
 export default CustomDocument;
-
-{/* <link href='https://landerbot.rappo.ai/static/css/embed.css' rel="stylesheet" />
-<iframe src='https://landerbot.rappo.ai' className="chatbot chatbotClose" id="chatbotWidget"></iframe>
-<script src='https://landerbot.rappo.ai'></script> */}
-
