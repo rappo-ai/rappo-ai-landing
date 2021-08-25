@@ -21,7 +21,19 @@ export default function Register() {
           </Text>
           <Input sx={styles.emailInput} type="email" id="email"
             name="email" placeholder={'Email Address'} />
-          <Button variant="primary" aria-label={'Sign Up'} sx={styles.signUp}>
+          <Button variant="primary" aria-label={'Sign Up'} sx={styles.signUp}
+            onClick={() => {
+              const email = document.getElementById('email').value
+              if (!email || !Rappo || !Rappo.widget) {
+                return
+              }
+              let data = {
+                payload: '/subscribe ' + email,
+                text: email,
+              }
+              Rappo.widget.contentWindow.postMessage(JSON.stringify(data), '*')
+            }}
+          >
             {'Sign up for free'}
           </Button>
         </Box>

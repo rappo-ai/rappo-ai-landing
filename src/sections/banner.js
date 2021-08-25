@@ -2,12 +2,7 @@
 import { jsx } from 'theme-ui';
 import { Container, Flex, Box, Heading, Text, Image, Button } from 'theme-ui';
 import React, { useState } from 'react';
-import ModalVideo from 'react-modal-video';
 import { Link } from 'components/link';
-import { FaPlayCircle } from 'react-icons/fa';
-import TextFeature from 'components/text-feature';
-import BannerBG from 'assets/bannerBg.png';
-import BannerThumb from 'assets/banner-thumb.png';
 import LandingGraphic from 'assets/landing/landing_graphic.png'
 
 import client1 from 'assets/sponsor/paypal.svg';
@@ -52,7 +47,15 @@ export default function Banner() {
             Add Rappo live chat to your website in minutes.
             Chat with your visitors as they browse your website. Boost your sales.
           </Text>
-          <Button variant="primary" aria-label={'Get free live chat'} className="get_started_button">
+          <Button variant="primary" aria-label={'Get free live chat'}
+            className="get_started_button"
+            onClick={() => {
+              if (!Rappo || !Rappo.widget) {
+                return
+              }
+              Rappo.widget.contentWindow.postMessage('', '*')
+            }}
+          >
             {'Get free live chat'}
           </Button>
         </Box>

@@ -33,6 +33,7 @@ export default function Footer() {
 
 const styles = {
   footer: {
+    mt: [60, null, null, null, null],
     container: {
       width: '100%',
       alignItems: 'stretch',
