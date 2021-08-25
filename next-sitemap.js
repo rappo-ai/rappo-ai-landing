@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: 'https://rappo.ai',
+  siteUrl: 'https://www.rappo.ai',
   generateRobotsTxt: true,
   // optional
   // robotsTxtOptions: {
