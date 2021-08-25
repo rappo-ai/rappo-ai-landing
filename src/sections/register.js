@@ -44,7 +44,8 @@ export default function Register() {
 
 const styles = {
   coreFeature: {
-    mt: 20,
+    // mt: 60,
+    mt: [60, 60, 60, 20, 20, 20],
     py: [0, null, null, 2, null, 7],
     position: 'relative',
     '&::before': {
