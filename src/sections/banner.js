@@ -53,7 +53,7 @@ export default function Banner() {
               if (!Rappo || !Rappo.widget) {
                 return
               }
-              Rappo.widget.contentWindow.postMessage('', '*')
+              Rappo.sendMessage({})
             }}
           >
             {'Get free live chat'}

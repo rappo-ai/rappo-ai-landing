@@ -35,7 +35,7 @@ export default function Header({ className }) {
                     payload: payload,
                     text: label,
                   }
-                  Rappo.widget.contentWindow.postMessage(JSON.stringify(data), '*')
+                  Rappo.sendMessage(data)
                 }}
               >
                 {label}
@@ -47,7 +47,7 @@ export default function Header({ className }) {
               if (!Rappo || !Rappo.widget) {
                 return
               }
-              Rappo.widget.contentWindow.postMessage('', '*')
+              Rappo.sendMessage({})
             }}
           >
             {'Get Started'}

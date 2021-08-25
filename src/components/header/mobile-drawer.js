@@ -51,7 +51,7 @@ const MobileDrawer = () => {
                     payload: payload,
                     text: label,
                   }
-                  Rappo.widget.contentWindow.postMessage(JSON.stringify(data), '*')
+                  Rappo.sendMessage(data)
                   toggleHandler()
                 }}
               >
