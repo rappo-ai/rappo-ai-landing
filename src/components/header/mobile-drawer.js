@@ -5,32 +5,7 @@ import Drawer from 'components/drawer';
 import { DrawerContext } from '../../contexts/drawer/drawer.context';
 import { IoMdClose, IoMdMenu } from 'react-icons/io';
 import { Link } from 'react-scroll';
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaGithubAlt,
-  FaDribbble,
-} from 'react-icons/fa';
 import menuItems from './header.data';
-
-const social = [
-  {
-    path: '/',
-    icon: <FaFacebookF />,
-  },
-  {
-    path: '/',
-    icon: <FaTwitter />,
-  },
-  {
-    path: '/',
-    icon: <FaGithubAlt />,
-  },
-  {
-    path: '/',
-    icon: <FaDribbble />,
-  },
-];
 
 const MobileDrawer = () => {
   const { state, dispatch } = useContext(DrawerContext);
@@ -59,7 +34,7 @@ const MobileDrawer = () => {
       <Scrollbars autoHide>
         <Box sx={styles.content}>
           <Box sx={styles.menu}>
-            {menuItems.map(({ path, label }, i) => (
+            {menuItems.map(({ path, label, payload }, i) => (
               <Link
                 activeClass="active"
                 to={path}
@@ -68,21 +43,23 @@ const MobileDrawer = () => {
                 offset={-70}
                 duration={500}
                 key={i}
+                onClick={() => {
+                  if (!payload || !Rappo || !Rappo.widget) {
+                    return
+                  }
+                  let data = {
+                    payload: payload,
+                    text: label,
+                  }
+                  Rappo.widget.contentWindow.postMessage(JSON.stringify(data), '*')
+                  toggleHandler()
+                }}
               >
                 {label}
               </Link>
             ))}
           </Box>
 
-          <Box sx={styles.menuFooter}>
-            <Box sx={styles.social}>
-              {social.map(({ path, icon }, i) => (
-                <Box as="span" key={i} sx={styles.social.icon}>
-                  <Link to={path}>{icon}</Link>
-                </Box>
-              ))}
-            </Box>
-          </Box>
         </Box>
       </Scrollbars>
     </Drawer>

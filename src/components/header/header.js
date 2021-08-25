@@ -8,6 +8,7 @@ import LogoWhite from 'assets/landing/logo.svg';
 import { DrawerProvider } from '../../contexts/drawer/drawer.provider';
 import MobileDrawer from './mobile-drawer';
 import menuItems from './header.data';
+import document from 'next/document';
 
 export default function Header({ className }) {
   return (
@@ -17,7 +18,7 @@ export default function Header({ className }) {
           <Logo src={className === 'sticky' ? LogoDark : LogoWhite} />
 
           <Flex as="nav" sx={styles.nav}>
-            {menuItems.map(({ path, label }, i) => (
+            {menuItems.map(({ path, label, payload }, i) => (
               <Link
                 activeClass="active"
                 to={path}
@@ -26,12 +27,29 @@ export default function Header({ className }) {
                 offset={-70}
                 duration={500}
                 key={i}
+                onClick={() => {
+                  if (!payload || !Rappo || !Rappo.widget) {
+                    return
+                  }
+                  let data = {
+                    payload: payload,
+                    text: label,
+                  }
+                  Rappo.widget.contentWindow.postMessage(JSON.stringify(data), '*')
+                }}
               >
                 {label}
               </Link>
             ))}
           </Flex>
-          <Button variant="primary" aria-label={'Get Started'} sx={styles.getStarted}>
+          <Button variant="primary" aria-label={'Get Started'} sx={styles.getStarted}
+            onClick={() => {
+              if (!Rappo || !Rappo.widget) {
+                return
+              }
+              Rappo.widget.contentWindow.postMessage('', '*')
+            }}
+          >
             {'Get Started'}
           </Button>
 

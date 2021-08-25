@@ -1,18 +1,17 @@
 export default [
   {
-    path: 'home',
-    label: 'Home',
-  },
-  {
     path: 'feature',
     label: 'Features',
+    payload: '/features'
   },
   {
-    path: 'testimonial',
-    label: 'Testimonial',
+    path: 'installation',
+    label: 'Installation',
+    payload: '/installation'
   },
   {
     path: 'pricing',
     label: 'Pricing',
+    payload: '/pricing'
   },
 ];
