@@ -20,14 +20,19 @@ export default function Register() {
             Signup Now To Get Live Chat For Free
           </Text>
           <Input sx={styles.emailInput} type="email" id="email"
-            name="email" placeholder={'Email Address'} onKeyPress={(e) => {
-              // console.log(e, e.nativeEvent, e.nativeEvent.keyCode )
-              if (e, e.nativeEvent, e.nativeEvent.keyCode === 13) {
-                sendEmail()
-              }
-            }} />
+            name="email" placeholder={'Email Address'} />
           <Button variant="primary" aria-label={'Sign Up'} sx={styles.signUp}
-            onClick={sendEmail}
+            onClick={() => {
+              const email = document.getElementById('email').value
+              if (!email || !Rappo || !Rappo.widget) {
+                return
+              }
+              let data = {
+                payload: '/subscribe ' + email,
+                text: email,
+              }
+              Rappo.widget.contentWindow.postMessage(JSON.stringify(data), '*')
+            }}
           >
             {'Sign up for free'}
           </Button>
@@ -35,18 +40,6 @@ export default function Register() {
       </Container>
     </section>
   );
-}
-
-function sendEmail() {
-  const email = document.getElementById('email').value
-  if (!email || !Rappo || !Rappo.widget) {
-    return
-  }
-  let data = {
-    payload: '/subscribe ' + email,
-    text: email,
-  }
-  Rappo.sendMessage(data)
 }
 
 const styles = {

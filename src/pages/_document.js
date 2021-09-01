@@ -1,6 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
-const localEnv = true
+const localEnv = false
 
 let chatBotCss = 'https://landerbot.rappo.ai/static/css/embed.css'
 let chatBotSrc = 'https://landerbot.rappo.ai/static/js/embed.js'
