@@ -47,7 +47,7 @@ export default function Header({ className }) {
               if (!Rappo || !Rappo.widget) {
                 return
               }
-              Rappo.widget.contentWindow.postMessage('', '*')
+              Rappo.openWidget()
             }}
           >
             {'Get Started'}
