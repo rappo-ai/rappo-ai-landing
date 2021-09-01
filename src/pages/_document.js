@@ -1,6 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
-const localEnv = false
+const localEnv = true
 
 let chatBotCss = 'https://landerbot.rappo.ai/static/css/embed.css'
 let chatBotSrc = 'https://landerbot.rappo.ai/static/js/embed.js'
@@ -24,14 +24,16 @@ class CustomDocument extends Document {
         <Head>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-          <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
           <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&display=swap" rel="stylesheet" />
           <link href={chatBotCss} rel="stylesheet" />
         </Head>
         <body>
           <Main />
           <NextScript />
-          <iframe src={chatBotIFrame} className="chatbot chatbotClose" id="chatbotWidget"></iframe>
+          <iframe src={chatBotIFrame} id="RappoChatbotWidget"></iframe>
           <script src={chatBotSrc}></script>
         </body>
       </Html>
@@ -40,8 +42,3 @@ class CustomDocument extends Document {
 }
 
 export default CustomDocument;
-
-{/* <link href='https://landerbot.rappo.ai/static/css/embed.css' rel="stylesheet" />
-<iframe src='https://landerbot.rappo.ai' className="chatbot chatbotClose" id="chatbotWidget"></iframe>
-<script src='https://landerbot.rappo.ai'></script> */}
-
