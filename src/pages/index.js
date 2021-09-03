@@ -21,7 +21,7 @@ export default function IndexPage() {
     <ThemeProvider theme={theme}>
       <StickyProvider>
         <Layout>
-          <SEO title="Rappo" />
+          <SEO title="Rappo - Live Chat Tool" />
           <Banner />
           <Register/>
           {/* <KeyFeature />
