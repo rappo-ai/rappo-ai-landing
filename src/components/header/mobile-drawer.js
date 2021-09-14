@@ -44,14 +44,10 @@ const MobileDrawer = () => {
                 duration={500}
                 key={i}
                 onClick={() => {
-                  if (!payload || !Rappo || !Rappo.widget) {
+                  if (!payload || !Rappo || !Rappo.sendMessage) {
                     return
                   }
-                  let data = {
-                    payload: payload,
-                    text: label,
-                  }
-                  Rappo.widget.contentWindow.postMessage(JSON.stringify(data), '*')
+                  Rappo.sendMessage(payload, label)
                   toggleHandler()
                 }}
               >

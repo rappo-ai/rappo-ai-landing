@@ -8,7 +8,6 @@ import LogoWhite from 'assets/landing/logo.svg';
 import { DrawerProvider } from '../../contexts/drawer/drawer.provider';
 import MobileDrawer from './mobile-drawer';
 import menuItems from './header.data';
-import document from 'next/document';
 
 export default function Header({ className }) {
   return (
@@ -28,14 +27,10 @@ export default function Header({ className }) {
                 duration={500}
                 key={i}
                 onClick={() => {
-                  if (!payload || !Rappo || !Rappo.widget) {
+                  if (!payload || !Rappo || !Rappo.sendMessage) {
                     return
                   }
-                  let data = {
-                    payload: payload,
-                    text: label,
-                  }
-                  Rappo.widget.contentWindow.postMessage(JSON.stringify(data), '*')
+                  Rappo.sendMessage(payload, label)
                 }}
               >
                 {label}

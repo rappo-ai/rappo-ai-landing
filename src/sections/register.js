@@ -1,11 +1,8 @@
 /** @jsx jsx */
-import { jsx, Container, Box, Grid, Text, Input, Button } from 'theme-ui';
-import TextFeature from 'components/text-feature';
+import { jsx, Container, Box, Text, Input, Button } from 'theme-ui';
 import Image from 'components/image';
 
 import ChatGraphic from 'assets/landing/chat_graphic.svg';
-import Briefcase from 'assets/core-feature/briefcase.svg';
-import Secure from 'assets/core-feature/secure.svg';
 
 
 export default function Register() {
@@ -24,14 +21,10 @@ export default function Register() {
           <Button variant="primary" aria-label={'Sign Up'} sx={styles.signUp}
             onClick={() => {
               const email = document.getElementById('email').value
-              if (!email || !Rappo || !Rappo.widget) {
+              if (!email || !Rappo || !Rappo.sendMessage) {
                 return
               }
-              let data = {
-                payload: '/subscribe ' + email,
-                text: email,
-              }
-              Rappo.widget.contentWindow.postMessage(JSON.stringify(data), '*')
+              Rappo.sendMessage('/subscribe ' + email, email)
             }}
           >
             {'Sign up for free'}
