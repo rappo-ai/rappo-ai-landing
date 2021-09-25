@@ -24,7 +24,7 @@ export default function Register() {
               if (!email || !Rappo || !Rappo.sendMessage) {
                 return
               }
-              Rappo.sendMessage('/subscribe ' + email, email)
+              Rappo.sendMessage('/subscribe', email, {email: email})
             }}
           >
             {'Sign up for free'}
