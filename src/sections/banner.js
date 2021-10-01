@@ -50,10 +50,10 @@ export default function Banner() {
           <Button variant="primary" aria-label={'Get free live chat'}
             className="get_started_button"
             onClick={() => {
-              if (!Rappo || !Rappo.widget) {
-                return
+              const subscribeSection = document.getElementById("subscribe");
+              if (subscribeSection) {
+                window.scrollTo({top: subscribeSection.offsetTop, left: 0, behavior: 'smooth'});
               }
-              Rappo.openWidget()
             }}
           >
             {'Get free live chat'}

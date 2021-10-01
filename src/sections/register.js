@@ -7,7 +7,7 @@ import ChatGraphic from 'assets/landing/chat_graphic.svg';
 
 export default function Register() {
   return (
-    <section sx={styles.coreFeature}>
+    <section sx={styles.coreFeature} id="subscribe">
       <Container sx={styles.containerBox}>
         <Box sx={styles.thumbnail}>
           <Image src={ChatGraphic} alt="Chat Graphic" />
@@ -25,6 +25,7 @@ export default function Register() {
                 return
               }
               Rappo.sendMessage('/subscribe', email, {email: email})
+              window.postMessage({type: '_event', data: {name: 'subscribe_click'}}, '*');
             }}
           >
             {'Sign up for free'}

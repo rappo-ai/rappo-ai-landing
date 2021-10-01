@@ -37,15 +37,15 @@ export default function Header({ className }) {
               </Link>
             ))}
           </Flex>
-          <Button variant="primary" aria-label={'Get Started'} sx={styles.getStarted}
+          <Button variant="primary" aria-label={'Sign Up'} sx={styles.getStarted}
             onClick={() => {
-              if (!Rappo || !Rappo.widget) {
-                return
+              const subscribeSection = document.getElementById("subscribe");
+              if (subscribeSection) {
+                window.scrollTo({top: subscribeSection.offsetTop, left: 0, behavior: 'smooth'});
               }
-              Rappo.openWidget()
             }}
           >
-            {'Get Started'}
+            {'Sign Up'}
           </Button>
 
           <MobileDrawer />
