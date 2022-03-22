@@ -20,11 +20,11 @@ export default function IndexPage() {
   const meta = [
     {
       name: `og:image`,
-      content: `/social_preview.png`,
+      content: `https://rappo.ai/social_preview.png`,
     },
     {
       name: `twitter:image`,
-      content: `/social_preview.png`,
+      content: `https://rappo.ai/social_preview.png`,
     },
   ];
   return (
