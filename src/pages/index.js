@@ -21,11 +21,11 @@ export default function IndexPage() {
   const meta = [
     {
       name: `og:image`,
-      content: `/static/images/landing_graphic-6177d4be038b1a8f4c0ae87f65938014.png`,
+      content: `/social_preview.png`,
     },
     {
       name: `twitter:image`,
-      content: `/static/images/landing_graphic-6177d4be038b1a8f4c0ae87f65938014.png`,
+      content: `/social_preview.png`,
     },
   ];
   return (
