@@ -15,7 +15,6 @@ import SecurePayment from 'sections/secure-payment';
 import Package from 'sections/package';
 import Faq from 'sections/faq';
 import Register from 'sections/register';
-import getConfig from 'next/config'
 
 export default function IndexPage() {
   const meta = [
