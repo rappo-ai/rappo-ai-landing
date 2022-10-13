@@ -2,9 +2,9 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 const localEnv = false
 
-let chatBotCss = 'https://landerbot.rappo.ai/static/css/embed.css'
-let chatBotSrc = 'https://landerbot.rappo.ai/static/js/embed.js'
-let chatBotIFrame = 'https://landerbot.rappo.ai'
+let chatBotCss = 'https://widget.rappo.renzil.com/static/css/embed.css'
+let chatBotSrc = 'https://widget.rappo.renzil.com/static/js/embed.js'
+let chatBotIFrame = 'https://widget.rappo.renzil.com'
 
 if (localEnv) {
   chatBotCss = 'http://127.0.0.1:8080/static/css/embed.css'

@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://www.rappo.ai/sitemap.xml
+Sitemap: https://rappo.renzil.com/sitemap.xml
