@@ -23,10 +23,6 @@ export default function IndexPage() {
       content: `https://rappo.renzil.com/social_preview.png`,
     },
     {
-      property: `og:image`,
-      content: `https://rappo.renzil.com/social_preview.png`,
-    },
-    {
       name: `twitter:image`,
       content: `https://rappo.renzil.com/social_preview.png`,
     },
