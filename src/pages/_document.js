@@ -29,6 +29,7 @@ class CustomDocument extends Document {
           <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
           <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&display=swap" rel="stylesheet" />
           <link href={chatBotCss} rel="stylesheet" />
+          <meta property="og:image" value="https://rappo.renzil.com/social_preview.png">
         </Head>
         <body>
           <Main />
