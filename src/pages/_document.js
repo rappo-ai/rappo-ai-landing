@@ -30,6 +30,7 @@ class CustomDocument extends Document {
           <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&display=swap" rel="stylesheet" />
           <link href={chatBotCss} rel="stylesheet" />
           <meta property="og:image" content="https://rappo.renzil.com/social_preview.png" />
+          <meta property="og:description" content="A complete solution to manage interactions on web with your customers." />
         </Head>
         <body>
           <Main />
